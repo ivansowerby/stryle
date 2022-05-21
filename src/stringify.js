@@ -14,9 +14,9 @@ class Stringify {
     }
 
     slice(from, to) {
+        if(to == 0) { return ''; }
         if(!from) { from = 0; }
         if(!to) { to = this.string.length - 1; }
-        if(to == 0) { return ''; }
         return this.string.slice(from, to).join('');
     }
 
