@@ -111,7 +111,7 @@ console.log(
 > <h4>Output</h4>
 
 ``` html
-<span style="font-size: 10px;">He</span>llo</span>, World<span style="font-size: 10px;">!</span>
+<span style="font-size: 10px;">Hello</span>, World<span style="font-size: 10px;">!</span>
 ```
 
 <h3>unstyle()</h3>
