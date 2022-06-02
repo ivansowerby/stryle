@@ -1,6 +1,7 @@
-class Stringify {
+module.exports = class Stringify {
     constructor(string) {
         this.string = Array.from(string);
+        this.styling = [];
     }
 
     length() {
@@ -10,7 +11,6 @@ class Stringify {
     replace(index, character) {
         if(character.length != 1) { return null; }
         this.string[index] = character;
-        return this.export();
     }
 
     slice(from, to) {
@@ -20,26 +20,75 @@ class Stringify {
         return this.string.slice(from, to).join('');
     }
 
-    style(index, style) {
-        this.string[index] = '<span style="' + style + '">' + this.string[index] + '</span>';
-        return this.export();
+    style(style, indices) {
+        for(let i = 0; i < this.styling.length; i++) {
+            if(this.styling[i]['style'] == style) {
+                this.styling[i]['indices'] = indices;
+            }
+        }
+
+        this.styling.push({
+            'style': style,
+            'indices': indices
+        });
     }
 
-    remove_style(index) {
-        let i = this.string[index].indexOf('>') + 1;
-        this.string[index] = this.string[index].slice(i, i + 1);
-        return this.export();
+    unstyle(style) {
+        for(let i = 0; i < this.styling.length; i++) {
+            if(this.styling[i]['style'] == style) {
+                this.styling.splice(i, 1);
+            }
+        }
     }
 
-    color(index, color) {
-        this.style(index, 'color: ' + color + ';')
+    color(color, indices) {
+        this.style('color:' + color + ';', indices);
+    }
+
+    uncolor(color) {
+        this.unstyle('color:' + color + ';');
     }
 
     export() {
-        return this.string.join('');
+        let string = structuredClone(this.string);
+        
+        let i = 0;
+        while(i < this.styling.length) {
+            let style = this.styling[i];
+            let indices = style['indices'].sort(
+                function(a, b) {
+                    return a - b;
+                }
+            );
+            let j = 0;
+            let index = 0;
+            while(j < indices.length) {
+                index = indices[j];
+                if(j < 1 || string[j - 1].includes('</span>')) {
+                    string[index] = this.#openSpan(index, style['style']);
+                    if(indices[j - 1] != index - 1 && indices[j + 1] != index + 1) {
+                        string[index] += '</span>';
+                    }
+                }
+                else if(indices[j + 1] != index + 1) {
+                    string[index] = this.#closeSpan(index);
+                }
+                j++;
+            }
+            i++;
+        }
+        return string.join('');
     }
 
-    apply_to(id) {
+    #openSpan(index, style) {
+        return '<span style="' + style + '">' + this.string[index];
+    }
+
+    #closeSpan(index) {
+        return this.string[index] + '</span>' 
+    }
+
+    applyTo(id) {
         document.getElementById(id).innerHTML = this.export();
     }
 }
