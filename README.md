@@ -81,7 +81,7 @@ Hello, Stryle!
 
 ---
 
-<h4>length()</h4>
+<h3>length()</h3>
 
 ``` js
 console.log(
@@ -97,7 +97,7 @@ console.log(
 
 ---
 
-<h4>replace()</h4>
+<h3>replace()</h3>
 
 ``` js
 string.replace(12, ';');
@@ -114,7 +114,7 @@ Hello, World;
 
 ---
 
-<h4>slice()</h4>
+<h3>slice()</h3>
 
 ``` js
 console.log(
@@ -169,7 +169,7 @@ Hello, World!
 
 ---
 
-<h5>range()</h5>
+<h3>range()</h3>
 
 ``` js
 console.log(
@@ -177,7 +177,7 @@ console.log(
 );
 ```
 
-> <h5>Output</h5>
+> <h4>Output</h4>
 
 ``` bash
 [ 5, 6, 7, 8, 9, 10 ]
