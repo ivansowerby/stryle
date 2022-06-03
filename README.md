@@ -2,7 +2,7 @@
 
 > <b>Str</b>[ing] [st]<b>yle</b>
 
-<p style="text-align:right">Revision for 1.0.1</p>
+<p style="text-align:right">Revision for 1.0.2</p>
 
 ### List of contents:
 1. Brief Introduction

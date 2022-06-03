@@ -17,7 +17,7 @@ class Stryle {
         if(to == 0) { return ''; }
         if(!from) { from = 0; }
         if(!to) { to = this.string.length - 1; }
-        let string = new Stringify(
+        let string = new Stryle(
             this.string.slice(from, to).join('')
         );
         string.styling = this.styling;
