@@ -53,6 +53,10 @@ class Stryle {
         this.unstyle('color:' + color + ';');
     }
 
+    import(string) {
+        this.string = string;
+    }
+
     export() {
         let string = structuredClone(this.string);
         

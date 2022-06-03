@@ -1,6 +1,6 @@
 {
   "name": "stryle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "str[ing] [st]yle; A JavaScript package for ease of string manipulation; with styling per character for HTML documents",
   "main": "src/stryle.js",
   "scripts": {

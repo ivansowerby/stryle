@@ -2,7 +2,7 @@
 
 > <b>Str</b>[ing] [st]<b>yle</b>
 
-<p style="text-align:right">Revision for 1.0.2</p>
+<p style="text-align:right">Revision for 1.0.3</p>
 
 ### List of contents:
 1. Brief Introduction
@@ -16,7 +16,7 @@
 
 A <i>JavaScript</i> package for ease of manipulating strings, with <i>CSS</i> styling for each character and basic methods.
 
-<b><h3 style="text-align:center">Installation</h3></b>
+<b><h2 style="text-align:center">Installation</h2></b>
 
 ---
 
@@ -32,10 +32,11 @@ To install the <i>stryle</i> package, use the command `npm install stryle`
 
 <h3>Initialization</h3>
 
-For each of the following examples the code snippet below is required to satisfy the importing of the module (<i>stryle.js</i>), and initialization of the <i>stryle</i> class.
+For each of the following examples the code snippet below is required to satisfy the importing of the modules, and initialization of the <i>stryle</i> class.
 
 ``` js
 var Stryle = require('stryle');
+var range = require('stryle/src/range')
 
 string = new Stryle('Hello, World!');
 ```
@@ -54,6 +55,28 @@ console.log(
 
 ``` html
 Hello, World!
+```
+
+---
+
+<h3>import()</h3>
+
+``` js
+string.import(
+    string.slice(
+        0, 6
+    ) + 'Stryle!'
+);
+
+console.log(
+    string.export()
+);
+```
+
+> <h4>Output</h4>
+
+``` html
+Hello, Stryle!
 ```
 
 ---
@@ -146,6 +169,22 @@ Hello, World!
 
 ---
 
+<h5>range()</h5>
+
+``` js
+console.log(
+    range(5, 10)
+);
+```
+
+> <h5>Output</h5>
+
+``` bash
+[ 5, 6, 7, 8, 9, 10 ]
+```
+
+---
+
 <b><h3>Coloring</h3></b>
 
 <h3>color()</h3>
@@ -153,7 +192,7 @@ Hello, World!
 ``` js
 string.color(
     'blue',
-    [12, 0, 1, 2, 3, 4]
+    range(0, 4)
 );
 console.log(
     string.export()
@@ -163,7 +202,7 @@ console.log(
 > <h4>Output</h4>
 
 ``` html
-<span style="color:blue;">Hello</span>, World<span style="color:blue;">!</span>
+<span style="color:blue;">Hello</span>, World!
 ```
 
 <h3>uncolor()</h3>
