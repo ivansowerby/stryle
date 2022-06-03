@@ -2,18 +2,29 @@
 
 > <b>Str</b>[ing] [st]<b>yle</b>
 
-<p style="text-align:right">Revision for 1.0.0</p>
+<p style="text-align:right">Revision for 1.0.1</p>
 
 ### List of contents:
 1. Brief Introduction
-2. Exemplar
-3. Legal (MIT license)
+2. Installation
+3. Exemplar
+4. Legal (MIT license)
 
 <b><h2 style="text-align:center">Brief Introduction</h3></b>
 
 ---
 
 A <i>JavaScript</i> package for ease of manipulating strings, with <i>CSS</i> styling for each character and basic methods.
+
+<b><h3 style="text-align:center">Installation</h3></b>
+
+---
+
+> Install [Node.js](https://nodejs.org/) if not already.
+
+Verify npm installation with `npm -v`, which should return the installed version. If not refer to prior step.
+
+To install the <i>stryle</i> package, use the command `npm install stryle`
 
 <b><h2 style="text-align:center">Exemplar</h3></b>
 
@@ -24,7 +35,7 @@ A <i>JavaScript</i> package for ease of manipulating strings, with <i>CSS</i> st
 For each of the following examples the code snippet below is required to satisfy the importing of the module (<i>stryle.js</i>), and initialization of the <i>stryle</i> class.
 
 ``` js
-var Stryle = require('./stryle.js');
+var Stryle = require('stryle');
 
 string = new Stryle('Hello, World!');
 ```
