@@ -1,14 +1,14 @@
 {
-  "name": "stringify",
+  "name": "stryle",
   "version": "1.0.0",
-  "description": "A JavaScript package for ease of string manipulation; with styling per character for HTML documents",
-  "main": "src/stringify.js",
+  "description": "str[ing] [st]yle; A JavaScript package for ease of string manipulation; with styling per character for HTML documents",
+  "main": "src/stryle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivanl-exe/stringify.js.git"
+    "url": "git+https://github.com/ivanl-exe/stryle.git"
   },
   "keywords": [
     "HTML",
@@ -17,7 +17,7 @@
   "author": "Ivan <ivan.exe@pm.me> (https://ivanl-exe.github.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ivanl-exe/stringify.js/issues"
+    "url": "https://github.com/ivanl-exe/stryle/issues"
   },
-  "homepage": "https://github.com/ivanl-exe/stringify.js#readme"
+  "homepage": "https://github.com/ivanl-exe/stryle#readme"
 }

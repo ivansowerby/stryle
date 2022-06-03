@@ -1,4 +1,6 @@
-<h1>Stringify</h1>
+<h1>Stryle</h1>
+
+> <b>Str</b>[ing] [st]<b>yle</b>
 
 <p style="text-align:right">Revision for 1.0.0</p>
 
@@ -19,12 +21,12 @@ A <i>JavaScript</i> package for ease of manipulating strings, with <i>CSS</i> st
 
 <h3>Initialization</h3>
 
-For each of the following examples the code snippet below is required to satisfy the importing of the module (<i>stringify.js</i>), and initialization of the <i>Stringify</i> class.
+For each of the following examples the code snippet below is required to satisfy the importing of the module (<i>stryle.js</i>), and initialization of the <i>stryle</i> class.
 
 ``` js
-var Stringify = require('./stringify.js');
+var Stryle = require('./stryle.js');
 
-string = new Stringify('Hello, World!');
+string = new Stryle('Hello, World!');
 ```
 
 ---
