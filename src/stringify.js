@@ -1,4 +1,4 @@
-module.exports = class Stringify {
+class Stringify {
     constructor(string) {
         this.string = Array.from(string);
         this.styling = [];
@@ -17,7 +17,11 @@ module.exports = class Stringify {
         if(to == 0) { return ''; }
         if(!from) { from = 0; }
         if(!to) { to = this.string.length - 1; }
-        return this.string.slice(from, to).join('');
+        let string = new Stringify(
+            this.string.slice(from, to).join('')
+        );
+        string.styling = this.styling;
+        return string.export();
     }
 
     style(style, indices) {
@@ -59,7 +63,12 @@ module.exports = class Stringify {
                 function(a, b) {
                     return a - b;
                 }
+            ).filter(
+                function(c) {
+                    return c < string.length;
+                }
             );
+
             let j = 0;
             let index = 0;
             while(j < indices.length) {
@@ -92,3 +101,5 @@ module.exports = class Stringify {
         document.getElementById(id).innerHTML = this.export();
     }
 }
+
+module.exports = Stringify;

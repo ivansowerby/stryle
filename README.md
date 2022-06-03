@@ -1,6 +1,6 @@
-<h1>stringify.py</h1>
+<h1>Stringify</h1>
 
-<p style="text-align:right">Revision for 0.1.0</p>
+<p style="text-align:right">Revision for 1.0.0</p>
 
 ### List of contents:
 1. Brief Introduction
@@ -11,7 +11,7 @@
 
 ---
 
-A <i>JavaScript</i> module for ease of manipulating strings, with <i>CSS</i> styling for each character and basic methods.
+A <i>JavaScript</i> package for ease of manipulating strings, with <i>CSS</i> styling for each character and basic methods.
 
 <b><h2 style="text-align:center">Exemplar</h3></b>
 
@@ -111,7 +111,7 @@ console.log(
 > <h4>Output</h4>
 
 ``` html
-<span style="font-size: 10px;">Hello</span>, World<span style="font-size: 10px;">!</span>
+<span style="font-size: 10px;">He</span>llo</span>, World<span style="font-size: 10px;">!</span>
 ```
 
 <h3>unstyle()</h3>

@@ -1,0 +1,23 @@
+{
+  "name": "stringify",
+  "version": "1.0.0",
+  "description": "A JavaScript package for ease of string manipulation; with styling per character for HTML documents",
+  "main": "src/stringify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanl-exe/stringify.js.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS"
+  ],
+  "author": "Ivan <ivan.exe@pm.me> (https://ivanl-exe.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanl-exe/stringify.js/issues"
+  },
+  "homepage": "https://github.com/ivanl-exe/stringify.js#readme"
+}
