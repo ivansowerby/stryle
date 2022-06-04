@@ -54,7 +54,7 @@ class Stryle {
     }
 
     import(string) {
-        this.string = string;
+        this.string = Array.from(string);
     }
 
     export() {

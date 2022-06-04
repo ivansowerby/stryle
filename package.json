@@ -1,6 +1,6 @@
 {
   "name": "stryle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "str[ing] [st]yle; A JavaScript package for ease of string manipulation; with styling per character for HTML documents",
   "main": "src/stryle.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/ivanl-exe/stryle#readme",
   "dependencies": {
-    "stryle": "^1.0.0"
+    "stryle": "^1.0.3"
   }
 }

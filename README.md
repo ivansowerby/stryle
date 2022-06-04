@@ -2,7 +2,7 @@
 
 > <b>Str</b>[ing] [st]<b>yle</b>
 
-<p style="text-align:right">Revision for 1.0.3</p>
+<p style="text-align:right">Revision for 1.0.4</p>
 
 ### List of contents:
 1. Brief Introduction
@@ -36,7 +36,7 @@ For each of the following examples the code snippet below is required to satisfy
 
 ``` js
 var Stryle = require('stryle');
-var range = require('stryle/src/range')
+var range = require('stryle/src/range');
 
 string = new Stryle('Hello, World!');
 ```
